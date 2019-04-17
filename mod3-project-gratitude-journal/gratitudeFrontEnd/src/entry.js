@@ -102,6 +102,10 @@ class Entry {
 
         this.div = document.createElement('div')
         this.div.className= 'card'
+        const updateBtn = document.createElement('button')
+        const deleteBtn = document.createElement('button')
+        // updateBtn.className = 'update' 
+        // deleteBtn.className = 'delete'
         const date = document.createElement('h2')
         const qtion = document.createElement('h3')
         const content = document.createElement('ol')
@@ -114,10 +118,12 @@ class Entry {
         this.input3 = input3
         date.innerText = created_at
         qtion.innerText = 'What are you grateful for?'
+        updateBtn.innerText = 'Edit'
+        deleteBtn.innerText = 'Erase'
         answer1.innerText = input1
         answer2.innerText = input2
         answer3.innerText = input3
-        content.append(date,qtion,answer1,answer2,answer3)
+        content.append(date,qtion,answer1,answer2,answer3,updateBtn,deleteBtn)
         this.div.append(content)
         document.querySelector('.container').append(this.div)
     }

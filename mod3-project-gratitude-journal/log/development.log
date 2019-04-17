@@ -575,3 +575,17 @@ Processing by EntriesController#index as */*
 Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/entries" for ::1 at 2019-04-17 15:46:38 -0500
+Processing by EntriesController#index as */*
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:3
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/entries" for ::1 at 2019-04-17 15:47:45 -0500
+Processing by EntriesController#index as */*
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:3
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
