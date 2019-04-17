@@ -14,28 +14,27 @@
 <body>
 
 <header>
-    <h1>Hello, there, beautiful!</h1>
+    <h1>Hello there, beautiful!</h1>
     <h2>GRATITUDE JOURNAL </h2>
     <button onclick="eventHandlers.deleteAll()">Delete my entries</button>
 </header>
 
 <main>
-    <section>
+    <div class="gratitude-form">
         <h3>What are you grateful for today?</h3>
-        <input type="text" id="whatGrateful" placeholder="Job, Car, Lifestyle...">
+        <input type="text" id="input1" value ="" placeholder="Job, Car, Lifestyle...">
         <br>
 
-        <h3>Who are you grateful for?</h3>
-        <input type="text" id="whoGrateful" placeholder="Mom, Dad, Friend, Dog...">
+        <input type="text" id="input2" value ="" placeholder="Mom, Dad, Friend, Dog...">
         <br>
 
-        <h3>What would you like to be grateful for?</h3>
-        <input type="text" id="futureGrateful" placeholder="Love, Money, Vacation...">
+        <input type="text" id="input3" value ="" placeholder="Love, Money, Vacation...">
         <br><br>
 
-        <button onclick="eventHandlers.addEntry()">Submit Entry</button>
+        <button onclick="eventHandlers.addEntry()">Submit</button>
         <br><br>
-    </section>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
