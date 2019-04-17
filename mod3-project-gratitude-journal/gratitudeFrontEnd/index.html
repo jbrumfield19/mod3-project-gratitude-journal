@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Your Wellness Tracker!</title>
+    <meta name="description" content="Wellness Tracker">
+    <!--    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/mod3-project-gratitude-journal/gratitudeFrontEnd/main.css">
+</head>
+<body>
+<header>
+    <h1>Hello, there, beautiful!</h1>
+    <h2>GRATITUDE JOURNAL </h2>
+    <button onclick="eventHandlers.deleteAll()">Delete my entries</button>
+    <!--    <button onclick="eventHandlers.toggleAll()">Toggle All</button>-->
+</header>
+<!--<br/><br/>-->
+
+<main>
+    <section>
+        <h3>What are you grateful for today?</h3>
+        <input type="text" id="whatGrateful" placeholder="Job, Car, Lifestyle...">
+        <br>
+
+        <h3>Who are you grateful for?</h3>
+        <input type="text" id="whoGrateful" placeholder="Mom, Dad, Friend, Dog...">
+        <br>
+
+        <h3>What would you like to be grateful for?</h3>
+        <input type="text" id="futureGrateful" placeholder="Love, Money, Vacation...">
+        <br><br>
+
+        <button onclick="eventHandlers.addEntry()">Submit Entry</button>
+        <br><br>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Now, Breathe. You've done something good for yourself!</h3>
+                <ul>
+                    <li>Click the button and repeat the following affirmations to yourself:</li><br>
+                    <li>I am strong. I am magnificient. I am powerful. I am great. I love my body. I love my life.</li>
+                </ul>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+                <button class="btn btn-success btn-md" id="gif-trigger">Restart GIF</button>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="http://balayoga.com/wp-content/uploads/2018/02/breathe.gif?x93890" height="300" width="400" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>March 1, 2019</h2>
+        <img src="https://webgradients.com/public/webgradients_png/080%20Passionate%20Bed.png" height="100" width="200">
+        <button onclick="eventHandlers.updateEntryTitle()">Update Journal</button>
+        <button onclick="eventHandlers.deleteAll()">Delete Journal</button>
+    </div>
+
+    <div class="card">
+        <h2>March 1, 2019</h2>
+        <img src="https://webgradients.com/public/webgradients_png/080%20Passionate%20Bed.png" height="100" width="200">
+        <button onclick="eventHandlers.updateEntryTitle()">Update Journal</button>
+        <button onclick="eventHandlers.deleteAll()">Delete Journal</button>
+    </div>
+
+    <div class="card">
+        <h2>March 1, 2019</h2>
+        <img src="https://webgradients.com/public/webgradients_png/080%20Passionate%20Bed.png" height="100" width="200">
+        <button onclick="eventHandlers.updateEntryTitle()">Update Journal</button>
+        <button onclick="eventHandlers.deleteAll()">Delete Journal</button>
+    </div>
+
+
+    <!--    <figure>-->
+    <!--        <img src="https://ibb.co/ZYvC5ZF" height="300" width="400" alt="Static Image" data-alt="http://balayoga.com/wp-content/uploads/2018/02/breathe.gif?x93890">-->
+    <!--    </figure>-->
+
+    <!--    <br/><br/>-->
+    <!--    <section>-->
+    <!--        <input type="number" id="toggleArchivedPosition" placeholder="Enter position">-->
+    <!--        <button onclick="eventHandlers.toggleArchived()">Toggle Archived</button>-->
+    <!--    </section>-->
+    <!--    <br/><br/>-->
+    <!--    <section>-->
+    <!--        <input type="number" id="titlePositionEdit" placeholder="enter position">-->
+    <!--        <input type="text" id="titleTextEdit" placeholder="enter new title here">-->
+    <!--    </section>-->
+    <!--    <section>-->
+    <!--        <input type="number" id="entryPositionEdit" placeholder="enter position">-->
+    <!--        <input type="text" id="entryTextEdit" placeholder="write your new entry here">-->
+    <!--        <button onclick="eventHandlers.updateEntryText()">Update Text</button>-->
+    <!--    </section>-->
+    <section id="display">
+    </section>
+</main>
+<br/>
+<footer>
+</footer>
+
+<!-- Your web-app is https, so your scripts need to be too -->
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"
+        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+        crossorigin="anonymous"></script>
+<!--<script src="/client.js"></script>-->
+<script type="text/javascript" src="/mod3-project-gratitude-journal/gratitudeFrontEnd/src/index.js"></script>
+
+</body>
+</html>
