@@ -1,7 +1,6 @@
 class Entry {
     constructor (value1,value2,value3){
-        this.div = document.createElement('div')
-        this.div.setAttribute('class','card')
+        this.div = document.querySelector('.card')
         const content = document.createElement('ol')
         const answer1 = document.createElement('li')
         const answer2 = document.createElement('li')
