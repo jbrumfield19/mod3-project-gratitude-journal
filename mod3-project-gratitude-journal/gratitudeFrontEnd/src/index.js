@@ -8,15 +8,16 @@ document.addEventListener('DOMContentLoaded',()=>{
    addForm.addEventListener('submit', (e) => {
        e.preventDefault()
 
-       let entry = {
-           date: 
-           input1: 
-           input2:
-           input3:
-       }
+    //    let entry = {
+    //        date: 
+    //        input1: 
+    //        input2:
+    //        input3:
+    //    }
 
 
    })
+
    
 
 
@@ -99,12 +100,13 @@ document.addEventListener('DOMContentLoaded',()=>{
 //     });
     fetch('http://localhost:3000/entries')
     .then((res) => res.json())
-    .then((entryData) => {
-       entryData.forEach(entry => {
-        let myEntry = new Entry('gratitude',entry.input1, entry.input2,entry.input3,entry.date)
-        myEntry.render()
+    .then((entry) => {
+       entry.forEach(newEntry => {
+        let myEntry = new Entry('gratitude',newEntry.input1, newEntry.input2,newEntry.input3, newEntry.date)
+        myEntry.render(newEntry.id)
        });
     })
+    
 });
 
     // view.setUpEventListeners();

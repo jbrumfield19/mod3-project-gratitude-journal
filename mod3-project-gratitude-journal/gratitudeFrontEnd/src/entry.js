@@ -100,34 +100,43 @@
 class Entry {
     constructor (journal,input1,input2,input3,created_at){
         this.journal = journal
-        this.div = document.createElement('div')
-        this.div.className= 'card'
+        this.input1 = input1
+        this.input2 = input2
+        this.input3 = input3
+        this.created_at = created_at
+    }
+    render(id){
+        this.id = id
+        const mainDiv = document.createElement('div')
+        mainDiv.className= 'card'
         const updateBtn = document.createElement('button')
         const deleteBtn = document.createElement('button')
         updateBtn.className = 'update' 
         deleteBtn.className = 'delete'
+        deleteBtn.id = 'delete-btn' + this.id
         const date = document.createElement('h2')
         const qtion = document.createElement('h3')
         const content = document.createElement('ol')
         const answer1 = document.createElement('li')
         const answer2 = document.createElement('li')
         const answer3 = document.createElement('li')
-        this.created_at = created_at
-        this.input1 = input1
-        this.input2 = input2
-        this.input3 = input3
-        date.innerText = created_at
+        date.innerText = this.created_at
         qtion.innerText = 'What are you grateful for?'
         updateBtn.innerText = 'Edit'
         deleteBtn.innerText = 'Erase'
-        answer1.innerText = input1
-        answer2.innerText = input2
-        answer3.innerText = input3
+        answer1.innerText = this.input1
+        answer2.innerText = this.input2
+        answer3.innerText = this.input3
         content.append(date,qtion,answer1,answer2,answer3,updateBtn,deleteBtn)
-        this.div.append(content)
-        document.querySelector(`.${this.journal}-journal`).append(this.div)
-    }
-    render(){
-        return this.div
+        mainDiv.append(content)
+        console.log(mainDiv)
+        document.querySelector(`.${this.journal}-journal`).append(mainDiv)
+        deleteBtn.addEventListener('click',(e)=>{
+            e.preventDefault()
+            fetch(`http://localhost:3000/entries/${this.id}`,{
+             method: "DELETE"
+            })
+            mainDiv.remove()
+        })
     }
 }
