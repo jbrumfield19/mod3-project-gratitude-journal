@@ -98,14 +98,14 @@
 //     },
 
 class Entry {
-    constructor (input1,input2,input3,created_at){
-
+    constructor (journal,input1,input2,input3,created_at){
+        this.journal = journal
         this.div = document.createElement('div')
         this.div.className= 'card'
         const updateBtn = document.createElement('button')
         const deleteBtn = document.createElement('button')
-        // updateBtn.className = 'update' 
-        // deleteBtn.className = 'delete'
+        updateBtn.className = 'update' 
+        deleteBtn.className = 'delete'
         const date = document.createElement('h2')
         const qtion = document.createElement('h3')
         const content = document.createElement('ol')
@@ -125,7 +125,7 @@ class Entry {
         answer3.innerText = input3
         content.append(date,qtion,answer1,answer2,answer3,updateBtn,deleteBtn)
         this.div.append(content)
-        document.querySelector('.container').append(this.div)
+        document.querySelector(`.${this.journal}-journal`).append(this.div)
     }
     render(){
         return this.div

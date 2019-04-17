@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     .then((res) => res.json())
     .then((entryData) => {
        entryData.forEach(entry => {
-        let myEntry = new Entry(entry.input1, entry.input2,entry.input3,entry.date)
+        let myEntry = new Entry('gratitude',entry.input1, entry.input2,entry.input3,entry.date)
         myEntry.render()
        });
     })
