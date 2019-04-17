@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded',()=>{
 
+    //olivia fetches
+
 
     var eventHandlers = {
         deleteAll: function() {
