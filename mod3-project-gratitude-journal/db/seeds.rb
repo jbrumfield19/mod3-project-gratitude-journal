@@ -7,22 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# require 'faker'
+
 
 Journal.destroy_all
 Entry.destroy_all
-
+Chat.destroy_all
 gratitude = Journal.create(name: "Gratitude")
 
-# 10.times do
-#     Entry.create(
-#         date: ,
-#         input1: "I am grateful for my loving family.",
-#         input2: "I am grateful for the ability to walk.",
-#         input3: "I am grateful for the roof above my head each night.",
-#         journal: gratitude
-#     )
-# end
+
+   message= Chat.create(message: "Let's get this Bread!!!")
+
 
     entry1 = Entry.create(
             date: Date.new(2019,4,1), 
