@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_04_17_161917) do
 
   create_table "entries", force: :cascade do |t|
+    t.date "date"
     t.string "input1"
     t.string "input2"
     t.string "input3"
