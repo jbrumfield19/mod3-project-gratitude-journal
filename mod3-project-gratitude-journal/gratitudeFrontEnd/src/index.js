@@ -8,6 +8,7 @@ function getCurrentDate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('id01').style.display='none'
     const messageBox = document.querySelector('.chat-submit')
     const message = document.querySelector('#message')
     const form = document.querySelector('.gratitude-form')
@@ -22,12 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const addFormContainer = document.querySelector('.gratitude-form')
     const meditationContainer = document.querySelector('.meditation-container')
     const journalsContainer = document.querySelector('.gratitude-journal')
-    const chatContainer = document.querySelector('.chatbox')
 
     //on load, site will only show "add entry" form
     meditationContainer.style.display = "none"
     journalsContainer.style.display = "none"
-    chatContainer.style.display = "none"
 
     //"right & left button" event listener
 
@@ -47,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor = cursor - 1
         if (cursor < 0) cursor = forms.length - 1
         forms[cursor].style.display = 'block'
-
     })
 
     leftBtn.addEventListener('click', (e) => {
@@ -97,9 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const newChat = {
             message: message.value
         }
-
+         
         Chat.create(newChat)
-        form.reset()
+        
     })
     //     var eventHandlers = {
     //         deleteAll: function() {
