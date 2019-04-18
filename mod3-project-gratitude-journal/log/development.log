@@ -2864,3 +2864,107 @@ Processing by EntriesController#index as */*
 Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/entries" for ::1 at 2019-04-18 10:46:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Josephine/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by EntriesController#index as */*
+  [1m[36mEntry Load (0.3ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mJournal Load (0.1ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+Completed 200 OK in 87ms (Views: 80.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/entries" for ::1 at 2019-04-18 10:46:47 -0500
+Processing by EntriesController#index as */*
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mJournal Load (0.1ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+  [1m[36mCACHE Journal Load (0.0ms)[0m  [1m[34mSELECT  "journals".* FROM "journals" WHERE "journals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:3
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.6ms)
+
+
