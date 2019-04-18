@@ -8,6 +8,8 @@ function getCurrentDate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const messageBox = document.querySelector('.chat-submit')
+    const message = document.querySelector('#message')
     const form = document.querySelector('.gratitude-form')
     const userInput1 = document.querySelector('#input1')
     const userInput2 = document.querySelector('#input2')
@@ -17,15 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        console.log(getCurrentDate())
-        const newEntry = {
+        const newChat = {
             date: getCurrentDate(),
             input1: userInput1.value,
             input2: userInput2.value,
             input3: userInput3.value
         }
 
-        Entry.create(newEntry)
+        Entry.create(newChat)
         form.reset()
     })
 
@@ -39,5 +40,26 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     
+   fetch('http://localhost:3000/chats')
+    .then((res) => res.json())
+    .then((messages)=>{
+        messages.forEach(message =>{
+            let newMess = new Chat(message.message)
+        })
+   })
+   messageBox.addEventListener('click', (e) => {
+        e.preventDefault()
+        const newChat = {
+            message: message.value
+        }
+
+        Chat.create(newChat)
+        form.reset()
+    })
+    //     var eventHandlers = {
+    //         deleteAll: function() {
+    //             myDiary.deleteAll();
+    //             view.displayEntries()
+    //         },
 
 })

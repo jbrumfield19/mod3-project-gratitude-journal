@@ -27,12 +27,12 @@
 
     <main>
 
-        <h2>What are you grateful for today?</h2>
+        
         <div class="main-form-container">
             <p><i class="arrow right"></i></p>
             
             <form class="gratitude-form" style = "">
-            
+                <h2>What are you grateful for today?</h2>
                 <input type="text" id="input1" value="" placeholder="Job, Car, Lifestyle...">
                 <br>
                 <input type="text" id="input2" value="" placeholder="Mom, Dad, Friend, Dog...">
@@ -43,6 +43,13 @@
                 <!-- <button onclick="eventHandlers.addEntry()">Submit</button>
                 <br><br> -->
             </form>
+
+
+        <form class="gratitude-form">
+            <h3>What are you grateful for today?</h3>
+            <input type="text" id="input1" value="" placeholder="Job, Car, Lifestyle...">
+            <br>
+            <input type="text" id="input2" value="" placeholder="Mom, Dad, Friend, Dog...">
 
             <br>
         
@@ -82,7 +89,10 @@
                 <!--button onclick="eventHandlers.deleteAll()"--><button class='delete'>Delete Journal</button>
             </div>
         </div>
-
+          <div class="boxed">
+            <input type=text id='message' value="" placeholder="Speak your mind">
+            <input type="submit" name="submit" value="Send" class="chat-submit">
+          </div>
         <section id="display">
         </section>
 
@@ -100,6 +110,7 @@
     <script type="text/javascript" src="src/index.js"></script>
     <script type="text/javascript" src="src/journal.js"></script>
     <script type="text/javascript" src="src/entry.js"></script>
+    <script type="text/javascript" src="src/chat.js"></script>
 
 </body>
 
