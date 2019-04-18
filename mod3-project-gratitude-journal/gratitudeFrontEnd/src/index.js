@@ -8,6 +8,7 @@ function getCurrentDate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('id01').style.display='none'
     const messageBox = document.querySelector('.chat-submit')
     const message = document.querySelector('#message')
     const form = document.querySelector('.gratitude-form')
@@ -52,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const newChat = {
             message: message.value
         }
-
+         
         Chat.create(newChat)
-        form.reset()
+        
     })
     //     var eventHandlers = {
     //         deleteAll: function() {

@@ -45,13 +45,6 @@
             </form>
 
 
-        <form class="gratitude-form">
-            <h3>What are you grateful for today?</h3>
-            <input type="text" id="input1" value="" placeholder="Job, Car, Lifestyle...">
-            <br>
-            <input type="text" id="input2" value="" placeholder="Mom, Dad, Friend, Dog...">
-
-            <br>
         
 
         <div class="meditation-container">
@@ -89,16 +82,30 @@
                 <!--button onclick="eventHandlers.deleteAll()"--><button class='delete'>Delete Journal</button>
             </div>
         </div>
-          <div class="boxed">
-            <input type=text id='message' value="" placeholder="Speak your mind">
-            <input type="submit" name="submit" value="Send" class="chat-submit">
-          </div>
+
+        <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <div class="boxed">
+                            <input type=text id='message' value="" placeholder="Speak your mind">
+                            <input type="submit" name="submit" value="Send" class="chat-submit">
+                        </div>
+                </div>
+            </div>
+        </div>                  
+          
         <section id="display">
         </section>
 
     </div>
 
     </main>
+    <button class="button-like" onclick="document.getElementById('id01').style.display='block'">
+          <i class="fa fa-heart"></i>
+          <span>Push to Talk</span>
+        </button>
 
     <br />
 
