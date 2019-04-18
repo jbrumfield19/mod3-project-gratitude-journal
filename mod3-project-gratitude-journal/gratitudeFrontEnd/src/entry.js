@@ -98,6 +98,7 @@
 //     },
 
 class Entry {
+<<<<<<< HEAD
     constructor(input1, input2, input3, date) {
         //this.journal = journal
         this.date = date
@@ -138,6 +139,15 @@ class Entry {
         document.querySelector(".gratitude-journal").append(this.div)
     }
 
+=======
+    constructor (journal,input1,input2,input3,created_at){
+        this.journal = journal
+        this.input1 = input1
+        this.input2 = input2
+        this.input3 = input3
+        this.created_at = created_at
+    }
+>>>>>>> f990fb645da3eb6b91f13478fff3730565181c7c
     render(id){
         this.id = id
         const mainDiv = document.createElement('div')
