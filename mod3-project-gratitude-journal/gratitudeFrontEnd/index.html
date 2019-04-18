@@ -22,16 +22,35 @@
 
     <header>
         <h1>Hello there, beautiful!</h1>
-        <h2>GRATITUDE JOURNAL </h2>
+        <!-- <h2>GRATITUDE JOURNAL </h2> -->
     </header>
 
     <main>
 
-        <form class="gratitude-form" style = "">
+        
+        <div class="main-form-container">
+            <p><i class="arrow right"></i></p>
+            
+            <form class="gratitude-form" style = "">
+                <h2>What are you grateful for today?</h2>
+                <input type="text" id="input1" value="" placeholder="Job, Car, Lifestyle...">
+                <br>
+                <input type="text" id="input2" value="" placeholder="Mom, Dad, Friend, Dog...">
+                <br>
+                <input type="text" id="input3" value="" placeholder="Love, Money, Vacation...">
+                <br><br>
+                <input type="submit" name="submit" value="Submit" class="submit">
+                <!-- <button onclick="eventHandlers.addEntry()">Submit</button>
+                <br><br> -->
+            </form>
+
+
+        <form class="gratitude-form">
             <h3>What are you grateful for today?</h3>
             <input type="text" id="input1" value="" placeholder="Job, Car, Lifestyle...">
             <br>
             <input type="text" id="input2" value="" placeholder="Mom, Dad, Friend, Dog...">
+
             <br>
             <input type="text" id="input3" value="" placeholder="Love, Money, Vacation...">
             <br><br>
@@ -39,6 +58,9 @@
         </form>
 
         <div class="container">
+
+
+        <div class="meditation-container">
             <div class="row">
                 <div class="col-lg-12">
                     <h3>Now, Breathe. You've done something good for yourself!</h3>
@@ -64,6 +86,7 @@
             </div>
         </div>
  
+        
         <div class='gratitude-journal'>
             <div class="card">
                 <h2>March 1, 2019</h2>
@@ -72,9 +95,14 @@
                     <button class='delete'>Delete Journal</button>
             </div>
         </div>
-
+          <div class="boxed">
+            <input type=text id='message' value="" placeholder="Speak your mind">
+            <input type="submit" name="submit" value="Send" class="chat-submit">
+          </div>
         <section id="display">
         </section>
+
+    </div>
 
     </main>
 
@@ -88,6 +116,7 @@
     <script type="text/javascript" src="src/index.js"></script>
     <script type="text/javascript" src="src/journal.js"></script>
     <script type="text/javascript" src="src/entry.js"></script>
+    <script type="text/javascript" src="src/chat.js"></script>
 
 </body>
 

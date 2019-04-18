@@ -6,13 +6,15 @@ input {
     outline: none;
 }
 
-header {
-
-}
+header {}
 
 h1 {
     font-family: 'Euphoria Script', cursive;
     font-size: 80px;
+}
+
+h2 {
+    font-size: 40px;
 }
 
 .menu {
@@ -25,7 +27,7 @@ h1 {
     /* border: 1px solid white; */
 }
 
-.menu a{
+.menu a {
     font-family: 'Georgia';
     text-decoration: none;
     font-size: 16px;
@@ -38,10 +40,26 @@ h1 {
     padding: 16px 24px;
 }
 
-.menu a:hover{
+.menu a:hover {
     background: white;
     color: black;
     /* text-decoration: underline; */
+}
+
+i {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg) scale(4, 4);
+    position: relative;
+    top: 110px;
+    left: 300px;
+    opacity: 0.5;
 }
 
 body {
@@ -50,6 +68,48 @@ body {
     background-position: relative;
     background-attachment: fixed;
     background-size: 100% 100%;
+}
+
+/* .add-form-container {
+    background: rgba(247,247,247,0.4);
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    box-shadow: inset 1px 2000px rgba(208, 208, 208, 0.54)
+} */
+
+/* main {
+    background: rgba(247,247,247,0.4);
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    box-shadow: inset 1px 2000px rgba(208, 208, 208, 0.54) 
+} */
+
+.main-form-container {
+    width: 500px;
+    border: 1px white;
+    margin: auto auto 0;
+    padding: 1em;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    text-align: center;
+    background: rgba(247, 247, 247, 0.4);
+}
+
+.gratitude-form {}
+
+input[type="text"] {
+    width: 50%;
+    border: 2px solid white;
+    margin-bottom: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    font-size: 16px;
+}
+
+::placeholder {
+    opacity: 0.6;
 }
 
 .delete {
@@ -65,4 +125,7 @@ body {
     display: inline-grid;
     margin: 1rem 2rem;
     box-shadow: 3px 4px #e04b52
+}
+.boxed{
+    border: #dc83ea solid 3px;
 }
