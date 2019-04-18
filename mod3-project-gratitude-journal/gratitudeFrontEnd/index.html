@@ -77,17 +77,31 @@
             </div>
         </div>
 
-
+        <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    
           <div class="chatbox">
-            <input type=text id='message' value="" placeholder="Speak your mind">
-            <input type="submit" name="submit" value="Send" class="chat-submit">
-          </div>
+                <input type=text id='message' value="" placeholder="Speak your mind">
+                <input type="submit" name="submit" value="Send" class="chat-submit">
+              </div>
+                </div>
+            </div>
+        </div>                  
+          
+
         <section id="display">
         </section>
 
     </div>
 
     </main>
+    <button class="button-like" onclick="document.getElementById('id01').style.display='block'">
+          <i class="fa fa-heart"></i>
+          <span>Push to Talk</span>
+        </button>
 
     <br/>
 
