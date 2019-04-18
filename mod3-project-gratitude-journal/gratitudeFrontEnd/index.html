@@ -4,6 +4,7 @@
 <head>
     <title>Gratitude</title>
     <meta name="description" content="Gratitude">
+    <!--    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,14 +24,16 @@
 
     <header>
         <h1>Hello there, beautiful!</h1>
+        <!-- <h2>GRATITUDE JOURNAL </h2> -->
     </header>
 
     <main>
 
-        
+            <h2>What are you grateful for today?</h2>
         <div class="main-form-container">
             <p><i class="arrow right"></i></p>
-            
+            <p><i class="arrow left"></i></p>
+
             <form class="gratitude-form" style = "">
                 <h2>What are you grateful for today?</h2>
                 <input type="text" id="input1" value="" placeholder="Job, Car, Lifestyle...">
@@ -43,21 +46,6 @@
                 <!-- <button onclick="eventHandlers.addEntry()">Submit</button>
                 <br><br> -->
             </form>
-
-
-        <form class="gratitude-form">
-            <h3>What are you grateful for today?</h3>
-            <input type="text" id="input1" value="" placeholder="Job, Car, Lifestyle...">
-            <br>
-            <input type="text" id="input2" value="" placeholder="Mom, Dad, Friend, Dog...">
-
-            <br>
-            <input type="text" id="input3" value="" placeholder="Love, Money, Vacation...">
-            <br><br>
-            <input type="submit" name="submit" value="Submit" class="submit">
-        </form>
-
-        <div class="container">
 
 
         <div class="meditation-container">
@@ -86,10 +74,11 @@
                 <h2>March 1, 2019</h2>
                 <img src="https://webgradients.com/public/webgradients_png/080%20Passionate%20Bed.png" height="100" width="200">
                 <button onclick="eventHandlers.updateEntryTitle()">Update Journal</button>
-                    <button class='delete'>Delete Journal</button>
             </div>
         </div>
-          <div class="boxed">
+
+
+          <div class="chatbox">
             <input type=text id='message' value="" placeholder="Speak your mind">
             <input type="submit" name="submit" value="Send" class="chat-submit">
           </div>
