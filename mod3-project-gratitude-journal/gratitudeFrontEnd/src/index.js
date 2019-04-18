@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const userInput2 = document.querySelector('#input2')
     const userInput3 = document.querySelector('#input3')
 
-    form.addEventListener('submit', (e) => {
+    Entry.fetchAllEntries()
 
+    form.addEventListener('submit', (e) => {
         e.preventDefault()
         console.log(getCurrentDate())
         const newEntry = {
@@ -28,15 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset()
     })
 
-    fetch('http://localhost:3000/entries')
-        .then((res) => res.json())
-        .then((entryData) => {
-            // console.log(entryData)
-            entryData.forEach(entry => {
-                let myEntry = new Entry(entry.input1, entry.input2, entry.input3, entry.date)
-                myEntry.render()
-            });
-        })
+
 
     //     var eventHandlers = {
     //         deleteAll: function() {
