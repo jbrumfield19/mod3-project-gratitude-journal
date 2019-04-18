@@ -29,9 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset()
     })
 
-<<<<<<< HEAD
-
-=======
     fetch('http://localhost:3000/entries')
     .then((res) => res.json())
     .then((entry) => {
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         myEntry.render(newEntry.id)
        });
     })
->>>>>>> f2ce8fe5e98d528ef9e651ad6fda0cd34094ddb1
 
     //     var eventHandlers = {
     //         deleteAll: function() {
