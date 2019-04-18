@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userInput2 = document.querySelector('#input2')
     const userInput3 = document.querySelector('#input3')
 
-    
+
     const rightBtn = document.querySelector(".arrow.right")
     const leftBtn = document.querySelector(".arrow.left")
     const mainContainer = document.querySelector('.main-form-container')
@@ -29,40 +29,33 @@ document.addEventListener('DOMContentLoaded', () => {
     journalsContainer.style.display = "none"
     chatContainer.style.display = "none"
 
-    //"right button" event listener
-    
-    let i = 0
+    //"right & left button" event listener
+
+    let forms = [
+        addFormContainer,
+        chatContainer,
+        meditationContainer,
+        journalsContainer
+    ]
+
+    let cursor = 0
+
     rightBtn.addEventListener('click', (e) => {
         e.preventDefault()
-        i++
-        if (i % 2 == 0){
-            addFormContainer.style.display = "block"
-            journalsContainer.style.display = "none"
-            chatContainer.style.display = "none"
-            meditationContainer.style.display = "none"
-        } else {
-            addFormContainer.style.display = "none"
-            journalsContainer.style.display = "none"
-            chatContainer.style.display = "none"
-            meditationContainer.style.display = "block"
-        }
+        forms[cursor].style.display = 'none'
+        // cursor = cursor - 1 % forms.length
+        cursor = cursor - 1
+        if (cursor < 0) cursor = forms.length - 1
+        forms[cursor].style.display = 'block'
+
     })
 
-    //"left button" event listener
     leftBtn.addEventListener('click', (e) => {
         e.preventDefault()
-        i++
-        if (i % 2 == 0){
-            addFormContainer.style.display = "block"
-            chatContainer.style.display = "none"
-            meditationContainer.style.display = "none"
-            journalsContainer.style.display = "none"
-        } else {
-            addFormContainer.style.display = "none"
-            chatContainer.style.display = "none"
-            meditationContainer.style.display = "none"
-            journalsContainer.style.display = "block" 
-        }
+        forms[cursor].style.display = 'none'
+        cursor = cursor + 1
+        if (cursor >= forms.length) cursor = 0
+        forms[cursor].style.display = 'block'
     })
 
     //fetching all journal entries to the page
