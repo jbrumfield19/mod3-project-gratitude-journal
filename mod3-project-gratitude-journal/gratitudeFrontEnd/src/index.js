@@ -8,6 +8,7 @@ function getCurrentDate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('id01').style.display='none'
     const messageBox = document.querySelector('.chat-submit')
     const message = document.querySelector('#message')
     const form = document.querySelector('.gratitude-form')
@@ -22,12 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const addFormContainer = document.querySelector('.gratitude-form')
     const meditationContainer = document.querySelector('.meditation-container')
     const journalsContainer = document.querySelector('.gratitude-journal')
-    const chatContainer = document.querySelector('.chatbox')
 
     //on load, site will only show "add entry" form
     meditationContainer.style.display = "none"
     journalsContainer.style.display = "none"
-    chatContainer.style.display = "none"
 
     //"right button" event listener
     
@@ -38,12 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i % 2 == 0){
             addFormContainer.style.display = "block"
             journalsContainer.style.display = "none"
-            chatContainer.style.display = "none"
             meditationContainer.style.display = "none"
         } else {
             addFormContainer.style.display = "none"
             journalsContainer.style.display = "none"
-            chatContainer.style.display = "none"
             meditationContainer.style.display = "block"
         }
     })
@@ -54,12 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
         i++
         if (i % 2 == 0){
             addFormContainer.style.display = "block"
-            chatContainer.style.display = "none"
             meditationContainer.style.display = "none"
             journalsContainer.style.display = "none"
         } else {
             addFormContainer.style.display = "none"
-            chatContainer.style.display = "none"
             meditationContainer.style.display = "none"
             journalsContainer.style.display = "block" 
         }
@@ -104,9 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const newChat = {
             message: message.value
         }
-
+         
         Chat.create(newChat)
-        form.reset()
+        
     })
     //     var eventHandlers = {
     //         deleteAll: function() {
