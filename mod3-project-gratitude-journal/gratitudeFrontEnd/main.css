@@ -46,6 +46,7 @@ h2 {
     /* text-decoration: underline; */
 }
 
+/* left & right arrow buttons */
 i {
     border: solid black;
     border-width: 0 2px 2px 0;
@@ -57,8 +58,17 @@ i {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg) scale(4, 4);
     position: relative;
-    top: 110px;
+    top: 113px;
     left: 300px;
+    opacity: 0.5;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg) scale(4, 4);    
+    position: relative;
+    top: 80px;
+    left: -300px;
     opacity: 0.5;
 }
 
@@ -97,7 +107,9 @@ body {
     background: rgba(247, 247, 247, 0.4);
 }
 
-.gratitude-form {}
+.gratitude-form {
+
+}
 
 input[type="text"] {
     width: 50%;
@@ -126,13 +138,14 @@ input[type="text"] {
     margin: 1rem 2rem;
     box-shadow: 3px 4px #e04b52
 }
-.boxed{
+
+.chatbox {
     border: #dc83ea solid 3px;
 }
 
 .button-like {
     border: 2px solid #a35198;
-    background-color: #d05fe6a7 ;
+    background-color: #491c52a7 ;
     text-decoration: none;
     padding: 1rem;
     position: relative;

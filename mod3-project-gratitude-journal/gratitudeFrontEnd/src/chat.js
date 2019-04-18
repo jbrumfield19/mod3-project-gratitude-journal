@@ -5,7 +5,7 @@ class Chat{
         this.li = document.createElement('li')
         this.li.innerText = message
         this.ul.append(this.li)
-        document.querySelector('.boxed').append(this.ul)
+        document.querySelector('.chatbox').append(this.ul)
     }
     static create(chat) {
         fetch("http://localhost:3000/chats", {
