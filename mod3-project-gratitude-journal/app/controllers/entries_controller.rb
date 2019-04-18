@@ -1,6 +1,7 @@
 class EntriesController < ApplicationController
     def index
-        render json: Entry.all
+        render json: Entry.all,
+        include: {journal: {except: [:id, :created_at, :updated_at] }}
     end
 
     def show
@@ -31,6 +32,6 @@ class EntriesController < ApplicationController
 
     private
     def entry_params
-        params.require(:entry).permit(:input1, :input2, :input3)
+        params.require(:entry).permit(:date, :input1, :input2, :input3, :journal_id)
     end
 end
