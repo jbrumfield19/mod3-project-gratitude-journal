@@ -138,8 +138,39 @@ class Entry {
         document.querySelector(".gratitude-journal").append(this.div)
     }
 
-    render() {
-        return this.div
+    render(id){
+        this.id = id
+        const mainDiv = document.createElement('div')
+        mainDiv.className= 'card'
+        const updateBtn = document.createElement('button')
+        const deleteBtn = document.createElement('button')
+        updateBtn.className = 'update' 
+        deleteBtn.className = 'delete'
+        deleteBtn.id = 'delete-btn' + this.id
+        const date = document.createElement('h2')
+        const qtion = document.createElement('h3')
+        const content = document.createElement('ol')
+        const answer1 = document.createElement('li')
+        const answer2 = document.createElement('li')
+        const answer3 = document.createElement('li')
+        date.innerText = this.created_at
+        qtion.innerText = 'What are you grateful for?'
+        updateBtn.innerText = 'Edit'
+        deleteBtn.innerText = 'Erase'
+        answer1.innerText = this.input1
+        answer2.innerText = this.input2
+        answer3.innerText = this.input3
+        content.append(date,qtion,answer1,answer2,answer3,updateBtn,deleteBtn)
+        mainDiv.append(content)
+        console.log(mainDiv)
+        document.querySelector(`.${this.journal}-journal`).append(mainDiv)
+        deleteBtn.addEventListener('click',(e)=>{
+            e.preventDefault()
+            fetch(`http://localhost:3000/entries/${this.id}`,{
+             method: "DELETE"
+            })
+            mainDiv.remove()
+        })
     }
 
     static create(entry) {

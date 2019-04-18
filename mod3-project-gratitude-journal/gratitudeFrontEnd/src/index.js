@@ -29,14 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     fetch('http://localhost:3000/entries')
-        .then((res) => res.json())
-        .then((entryData) => {
-            // console.log(entryData)
-            entryData.forEach(entry => {
-                let myEntry = new Entry(entry.input1, entry.input2, entry.input3, entry.date)
-                myEntry.render()
-            });
-        })
+    .then((res) => res.json())
+    .then((entry) => {
+       entry.forEach(newEntry => {
+        let myEntry = new Entry('gratitude',newEntry.input1, newEntry.input2,newEntry.input3, newEntry.date)
+        myEntry.render(newEntry.id)
+       });
+    })
 
     //     var eventHandlers = {
     //         deleteAll: function() {
