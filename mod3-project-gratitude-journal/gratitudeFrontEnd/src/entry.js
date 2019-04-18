@@ -1,10 +1,11 @@
 class Entry {
-    constructor(input1, input2, input3, date) {
+    constructor(input1, input2, input3, date, id) {
         this.date = date
         this.input1 = input1
         this.input2 = input2
         this.input3 = input3
-
+        this.id = id
+        
         this.div = document.createElement('div')
         this.div.className = 'card'
 
@@ -31,6 +32,13 @@ class Entry {
 
         const answer3 = document.createElement('li')
         answer3.innerText = input3
+        deleteBtn.addEventListener('click',(e)=>{
+                    e.preventDefault()
+                    fetch(`http://localhost:3000/entries/${this.id}`,{
+                     method: "DELETE"
+                    })
+                    this.div.remove()
+                })
 
         content.prepend(dateHeader)
         content.append(qtion, answer1, answer2, answer3, updateBtn, deleteBtn)
@@ -48,7 +56,7 @@ class Entry {
         .then((entryData) => {
             // console.log(entryData)
             entryData.forEach(entry => {
-                let myEntry = new Entry(entry.input1, entry.input2, entry.input3, entry.date)
+                let myEntry = new Entry(entry.input1, entry.input2, entry.input3, entry.date, entry.id)
                 myEntry.render()
             });
         })
@@ -72,7 +80,7 @@ class Entry {
                 return response.json()
             })
             .then(function (entry) {
-                new Entry(entry.input1, entry.input2, entry.input3, entry.date)
+                new Entry(entry.input1, entry.input2, entry.input3, entry.date,entry.id)
             })
     }
 
