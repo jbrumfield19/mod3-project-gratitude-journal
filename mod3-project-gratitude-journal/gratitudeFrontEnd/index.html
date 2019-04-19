@@ -4,11 +4,14 @@
 <head>
     <title>Gratitude</title>
     <meta name="description" content="Gratitude">
-    <!--    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="meditation.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Euphoria+Script" rel="stylesheet">
 </head>
 
@@ -17,6 +20,7 @@
     <div class = "menu">
         <a href="#">READ</a>
         <a href="#">RELAX</a>
+        <a href="#">PROFILE</a>
     </div>
 
     <header>
@@ -30,8 +34,9 @@
         <div class="main-form-container">
             <p><i class="arrow right"></i></p>
             <p><i class="arrow left"></i></p>
-            
+
             <form class="gratitude-form" style = "">
+<!--                <h2>What are you grateful for today?</h2>-->
                 <input type="text" id="input1" value="" placeholder="Job, Car, Lifestyle...">
                 <br>
                 <input type="text" id="input2" value="" placeholder="Mom, Dad, Friend, Dog...">
@@ -42,32 +47,26 @@
                 <!-- <button onclick="eventHandlers.addEntry()">Submit</button>
                 <br><br> -->
             </form>
-        
+
 
         <div class="meditation-container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h3>Now, Breathe. You've done something good for yourself!</h3>
-                    <ul>
-                        <li>Click the button and repeat the following affirmations to yourself:</li><br>
-                        <li>I am strong. I am magnificient. I am powerful. I am great. I love my body. I love my life.
-                        </li>
-                    </ul>
+            <div class="app">
+                <div class="vid-container">
+                    <video loop >
+                        <source src="assets/video/rain.mp4"  type="video/mp4">
+                    </video>
                 </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-lg-12">
-                    <button class="btn btn-success btn-md" id="gif-trigger">Restart GIF</button>
+
+                <div class="player-container">
+                    <audio class="song">
+                        <source src="assets/sounds/rain.mp3" />
+                    </audio>
+                    <img src="assets/svg/play.svg" class="play"/>
+                    <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+                    </svg>
+                    <h3 class="time-display">0:00</h3>
                 </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-lg-12">
-                    <img src="http://balayoga.com/wp-content/uploads/2018/02/breathe.gif?x93890" height="300"
-                        width="400" alt="" />
-                </div>
-            </div>
         </div>
  
         
@@ -76,7 +75,6 @@
                 <h2>March 1, 2019</h2>
                 <img src="https://webgradients.com/public/webgradients_png/080%20Passionate%20Bed.png" height="100" width="200">
                 <button onclick="eventHandlers.updateEntryTitle()">Update Journal</button>
-                <!--button onclick="eventHandlers.deleteAll()"--><button class='delete'>Delete Journal</button>
             </div>
         </div>
 
@@ -106,7 +104,7 @@
           <span>Push to Talk</span>
         </button>
 
-    <br />
+    <br/>
 
     <footer>
     </footer>
@@ -116,6 +114,7 @@
     <script type="text/javascript" src="src/index.js"></script>
     <script type="text/javascript" src="src/journal.js"></script>
     <script type="text/javascript" src="src/entry.js"></script>
+    <script type="text/javascript" src="src/meditation.js"></script>
     <script type="text/javascript" src="src/chat.js"></script>
 
 </body>
