@@ -6,17 +6,21 @@ input {
     outline: none;
 }
 
-header {}
+header {
+
+}
 
 h1 {
-    font-family: 'Euphoria Script', cursive;
+    font-family: 'Oswald', sans-serif;
     font-size: 80px;
 }
 
 h2 {
     font-size: 40px;
+    font-family: 'Parisienne', cursive;
 }
 
+/* menu navigation bar */
 .menu {
     background-color: #f0bfff;
     margin: 0px;
@@ -43,7 +47,6 @@ h2 {
 .menu a:hover {
     background: white;
     color: black;
-    /* text-decoration: underline; */
 }
 
 /* left & right arrow buttons */
@@ -73,7 +76,7 @@ i {
 }
 
 body {
-    background-image: url("assets/images/5105.jpg");
+    background-image: url("assets/images/images (1).jpeg");
     background-repeat: no-repeat;
     background-position: relative;
     background-attachment: fixed;
