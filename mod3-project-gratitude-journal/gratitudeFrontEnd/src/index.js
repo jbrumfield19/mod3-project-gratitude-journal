@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatBtn = document.querySelector('.button-like')
     const rightBtn = document.querySelector(".arrow.right")
     const leftBtn = document.querySelector(".arrow.left")
+    const closeBtn = document.querySelector('#close')
     const mainContainer = document.querySelector('.main-form-container')
     const addFormContainer = document.querySelector('.gratitude-form')
     const meditationContainer = document.querySelector('.meditation-container')
@@ -58,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     chatBtn.addEventListener('click',(e)=>{
         e.preventDefault()
         chatBtn.style.display = 'none'
+    })
+    closeBtn.addEventListener('click',(e)=>{
+        e.preventDefault()
+        chatBtn.style.display = 'block'
     })
     //fetching all journal entries to the page
     Entry.fetchAllEntries()
