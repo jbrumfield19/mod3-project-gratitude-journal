@@ -8,15 +8,15 @@ function getCurrentDate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('id01').style.display='none'
+    const chatContainer = document.getElementById('id01')
+    chatContainer.style.display='none'
     const messageBox = document.querySelector('.chat-submit')
     const message = document.querySelector('#message')
     const form = document.querySelector('.gratitude-form')
     const userInput1 = document.querySelector('#input1')
     const userInput2 = document.querySelector('#input2')
     const userInput3 = document.querySelector('#input3')
-
-
+    const chatBtn = document.querySelector('.button-like')
     const rightBtn = document.querySelector(".arrow.right")
     const leftBtn = document.querySelector(".arrow.left")
     const mainContainer = document.querySelector('.main-form-container')
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let forms = [
         addFormContainer,
-        chatContainer,
+        // chatContainer,
         meditationContainer,
         journalsContainer
     ]
@@ -55,7 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cursor >= forms.length) cursor = 0
         forms[cursor].style.display = 'block'
     })
-
+    chatBtn.addEventListener('click',(e)=>{
+        e.preventDefault()
+        chatBtn.style.display = 'none'
+    })
     //fetching all journal entries to the page
     Entry.fetchAllEntries()
 
@@ -95,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newChat = {
             message: message.value
         }
-         
+         message.value = ''
         Chat.create(newChat)
         
     })
