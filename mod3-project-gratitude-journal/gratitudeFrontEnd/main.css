@@ -6,7 +6,9 @@ input {
     outline: none;
 }
 
-header {}
+header {
+
+}
 
 h1 {
     font-family: 'Euphoria Script', cursive;
@@ -17,6 +19,7 @@ h2 {
     font-size: 40px;
 }
 
+/* menu navigation bar */
 .menu {
     background-color: #f0bfff;
     margin: 0px;
@@ -43,7 +46,6 @@ h2 {
 .menu a:hover {
     background: white;
     color: black;
-    /* text-decoration: underline; */
 }
 
 /* left & right arrow buttons */
