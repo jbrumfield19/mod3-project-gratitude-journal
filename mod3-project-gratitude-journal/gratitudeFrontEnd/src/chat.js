@@ -1,11 +1,10 @@
 class Chat{
     constructor(message){
         this.message = message
-        this.ul = document.createElement('ul')
+        this.ul = document.querySelector('.messages')
         this.li = document.createElement('li')
         this.li.innerText = message
         this.ul.append(this.li)
-        document.querySelector('.chatbox').append(this.ul)
     }
     static create(chat) {
         fetch("http://localhost:3000/chats", {

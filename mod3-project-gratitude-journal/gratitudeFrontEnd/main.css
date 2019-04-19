@@ -20,6 +20,9 @@ h2 {
     font-family: 'Parisienne', cursive;
 }
 
+ul {
+    list-style-type: none;
+ }
 /* menu navigation bar */
 .menu {
     background-color: #f0bfff;
@@ -115,7 +118,7 @@ body {
 }
 
 input[type="text"] {
-    width: 50%;
+    width: 25%;
     border: 2px solid white;
     margin-bottom: 10px;
     -moz-border-radius: 10px;
@@ -139,11 +142,16 @@ input[type="text"] {
     height: 25rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #e04b52
+    box-shadow: 3px 4px #dc83ea
 }
 
 .chatbox {
     border: #dc83ea solid 3px;
+    position: relative;
+    width: 15rem;
+    top: 100%;
+    left: 80%;
+    
 }
 
 .button-like {
@@ -151,7 +159,9 @@ input[type="text"] {
     background-color: #491c52a7 ;
     text-decoration: none;
     padding: 1rem;
-    position: relative;
+    position: absolute;
+    top: 85%;
+    left: 85%;
     vertical-align: middle;
     text-align: center;
     display: inline-block;
