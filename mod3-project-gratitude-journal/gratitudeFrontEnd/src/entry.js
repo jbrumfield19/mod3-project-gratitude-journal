@@ -9,11 +9,8 @@ class Entry {
         this.div = document.createElement('div')
         this.div.className = 'card'
 
-        const updateBtn = document.createElement('button')
         const deleteBtn = document.createElement('button')
-        updateBtn.className = 'update'
         deleteBtn.className = 'delete'
-        updateBtn.innerText = 'Edit'
         deleteBtn.innerText = 'Erase'
 
         const dateHeader = document.createElement('h2')
@@ -33,18 +30,21 @@ class Entry {
 
         const answer3 = document.createElement('li')
         answer3.innerText = input3
-        deleteBtn.addEventListener('click',(e)=>{
-                    e.preventDefault()
-                    fetch(`http://localhost:3000/entries/${this.id}`,{
-                     method: "DELETE"
-                    })
-                    this.div.remove()
-                })
 
         content.prepend(dateHeader)
-        content.append(qtion, answer1, answer2, answer3, updateBtn, deleteBtn)
+        content.append(qtion, answer1, answer2, answer3, deleteBtn)
         this.div.append(content)
         document.querySelector(".gratitude-journal").append(this.div)
+
+
+        deleteBtn.addEventListener('click',(e)=>{
+            e.preventDefault()
+            fetch(`http://localhost:3000/entries/${this.id}`,{
+                method: "DELETE"
+            })
+            confirm("Are you sure you want to delete this entry?")
+            this.div.remove()
+        })
     }
 
     render() {
@@ -81,45 +81,7 @@ class Entry {
                 return response.json()
             })
             .then(function (entry) {
-                new Entry(entry.input1, entry.input2, entry.input3, entry.date,entry.id)
+                new Entry(entry.input1, entry.input2, entry.input3, entry.date, entry.id)
             })
     }
-
-    // render(id){
-    //     this.id = id
-    //     const mainDiv = document.createElement('div')
-    //     mainDiv.className= 'card'
-    //     const updateBtn = document.createElement('button')
-    //     const deleteBtn = document.createElement('button')
-    //     updateBtn.className = 'update' 
-    //     deleteBtn.className = 'delete'
-    //     deleteBtn.id = 'delete-btn' + this.id
-    //     const date = document.createElement('h2')
-    //     const qtion = document.createElement('h3')
-    //     const content = document.createElement('ol')
-    //     const answer1 = document.createElement('li')
-    //     const answer2 = document.createElement('li')
-    //     const answer3 = document.createElement('li')
-    //     date.innerText = this.created_at
-    //     qtion.innerText = 'What are you grateful for?'
-    //     updateBtn.innerText = 'Edit'
-    //     deleteBtn.innerText = 'Erase'
-    //     answer1.innerText = this.input1
-    //     answer2.innerText = this.input2
-    //     answer3.innerText = this.input3
-    //     content.append(date,qtion,answer1,answer2,answer3,updateBtn,deleteBtn)
-    //     mainDiv.append(content)
-    //     console.log(mainDiv)
-    //     document.querySelector(`.${this.journal}-journal`).append(mainDiv)
-    //     deleteBtn.addEventListener('click',(e)=>{
-    //         e.preventDefault()
-    //         fetch(`http://localhost:3000/entries/${this.id}`,{
-    //          method: "DELETE"
-    //         })
-    //         mainDiv.remove()
-    //     })
-    // }
-
 }
-
-

@@ -6,21 +6,22 @@ class Chat{
         this.li.innerText = message
         this.ul.append(this.li)
     }
+
     static create(chat) {
         fetch("http://localhost:3000/chats", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    message: chat.message
-                })
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: chat.message
             })
-            .then(function (response) {
-                return response.json()
-            })
-            .then(function (chat) {
-                new Chat(chat.message)
-            })
+        })
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (chat) {
+            new Chat(chat.message)
+        })
     }
 }

@@ -11,19 +11,33 @@ sounds.forEach(sound => {
     });
 });
 
-play.addEventListener("click", function() {
+let click = 0
+play.addEventListener("click", function(e) {
+    e.preventDefault()
     checkPlaying(song);
-});
 
+    if(click % 2 == 0){
+        document.body.style.backgroundImage = "url('assets/images/images (1).jpeg')"
+        video.style.display = 'block'
+    } else {
+        document.body.style.backgroundImage = "url('assets/video/rain.mp4')"
+        video.style.display = 'block'
+    }
+});
 
 const checkPlaying = song => {
     if (song.paused) {
         song.play();
         video.play();
         play.src = "assets/svg/pause.svg";
+        document.body.style.backgroundImage = "url('assets/images/images (1).jpeg')"
     } else {
         song.pause();
         video.pause();
         play.src = "assets/svg/play.svg";
+        video.style.display = "none"
+        meditationContainer.style.display = "block"
+        // document.body.style.backgroundImage = "url('assets/images/5105.jpg')"
     }
 };
+

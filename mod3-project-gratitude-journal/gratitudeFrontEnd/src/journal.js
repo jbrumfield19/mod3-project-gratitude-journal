@@ -1,4 +1,4 @@
-class Journal{
+class Journal {
     constructor(name){
         this.name = name
         this.journal = document.createElement('div')
