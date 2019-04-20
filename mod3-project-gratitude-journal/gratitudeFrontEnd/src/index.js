@@ -8,32 +8,32 @@ function getCurrentDate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const chatContainer = document.getElementById('id01')
+    chatContainer.style.display='none'
     const messageBox = document.querySelector('.chat-submit')
     const message = document.querySelector('#message')
     const form = document.querySelector('.gratitude-form')
     const userInput1 = document.querySelector('#input1')
     const userInput2 = document.querySelector('#input2')
     const userInput3 = document.querySelector('#input3')
-
-
+    const chatBtn = document.querySelector('.button-like')
     const rightBtn = document.querySelector(".arrow.right")
     const leftBtn = document.querySelector(".arrow.left")
+    const closeBtn = document.querySelector('#close')
     const mainContainer = document.querySelector('.main-form-container')
     const addFormContainer = document.querySelector('.gratitude-form')
     const meditationContainer = document.querySelector('.meditation-container')
     const journalsContainer = document.querySelector('.gratitude-journal')
-    const chatContainer = document.querySelector('.chatbox')
 
     //on load, site will only show "add entry" form
     video.style.display = "none"
     meditationContainer.style.display = "none"
     journalsContainer.style.display = "none"
-    chatContainer.style.display = "none"
 
     //"right & left button" event listener
     let forms = [
         addFormContainer,
-        chatContainer,
+        // chatContainer,
         meditationContainer,
         journalsContainer
     ]
@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor = cursor - 1
         if (cursor < 0) cursor = forms.length - 1
         forms[cursor].style.display = 'block'
-
     })
 
     leftBtn.addEventListener('click', (e) => {
@@ -134,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             message.value = ""
             Chat.create(newChat)
-
-    })
+        })
 
 })

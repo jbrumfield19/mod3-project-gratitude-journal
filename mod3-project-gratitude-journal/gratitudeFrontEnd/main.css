@@ -29,6 +29,10 @@ h3 {
     margin-right: 30px;
 }
 
+ul {
+    list-style-type: none;
+ }
+ 
 /* menu navigation bar */
 .menu {
     background-color: rgba(198, 111, 235, 0.851);
@@ -217,7 +221,6 @@ input[type="submit"] {
     display: inline-grid;
     margin: 1rem 2rem;
     box-shadow: 10px 10px #dd88f7;
-    /* margin-top: -40px; */
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 

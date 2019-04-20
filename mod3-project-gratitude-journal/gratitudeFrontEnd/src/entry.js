@@ -15,6 +15,7 @@ class Entry {
 
         const dateHeader = document.createElement('h2')
         dateHeader.innerText = getCurrentDate()
+        dateHeader.className = 'date'
 
         const qtion = document.createElement('h3')
         qtion.innerText = 'What are you grateful for?'
