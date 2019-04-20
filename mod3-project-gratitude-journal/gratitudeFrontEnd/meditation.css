@@ -1,0 +1,52 @@
+.app {
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.player-container {
+    position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.player-container svg {
+    position: absolute;
+    margin-top: -80px;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+.player-container svg circle {
+    transition: all 0.2s ease-in-out;
+}
+
+.time-display {
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    bottom: 0%;
+}
+
+video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.play {
+    margin-top: -150px;
+    margin-right: -2px;
+}

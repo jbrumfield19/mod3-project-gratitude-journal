@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatContainer = document.querySelector('.chatbox')
 
     //on load, site will only show "add entry" form
+    video.style.display = "none"
     meditationContainer.style.display = "none"
     journalsContainer.style.display = "none"
     chatContainer.style.display = "none"
 
     //"right & left button" event listener
-
     let forms = [
         addFormContainer,
         chatContainer,
@@ -58,6 +58,40 @@ document.addEventListener('DOMContentLoaded', () => {
         forms[cursor].style.display = 'block'
     })
 
+    //navigation bar paths
+    const addNav = document.querySelector('.menu-add-button')
+    const readNav = document.querySelector('.menu-read-button')
+    const relaxNav = document.querySelector('.menu-meditation-button')
+    const speakNav = document.querySelector('.menu-chat-button')
+
+    addNav.addEventListener('click', (e) => {
+        addFormContainer.style.display = 'block'
+        meditationContainer.style.display = 'none'
+        journalsContainer.style.display = 'none'
+        chatContainer.style.display = 'none'
+    })
+
+    readNav.addEventListener('click', (e) => {
+        addFormContainer.style.display = 'none'
+        meditationContainer.style.display = 'none'
+        journalsContainer.style.display = 'block'
+        chatContainer.style.display = 'none'
+    })
+
+    relaxNav.addEventListener('click', (e) => {
+        addFormContainer.style.display = 'none'
+        meditationContainer.style.display = 'block'
+        journalsContainer.style.display = 'none'
+        chatContainer.style.display = 'none'
+    })
+
+    speakNav.addEventListener('click', (e) => {
+        addFormContainer.style.display = 'none'
+        meditationContainer.style.display = 'none'
+        journalsContainer.style.display = 'none'
+        chatContainer.style.display = 'block'
+    })
+
     //fetching all journal entries to the page
     Entry.fetchAllEntries()
 
@@ -71,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             input3: userInput3.value
         }
 
+        confirm("Great job for taking the time to pause & be thankful today.")
         Entry.create(newChat)
         form.reset()
     })
@@ -92,22 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 let newMess = new Chat(message.message)
             })
         })
-    messageBox.addEventListener('click', (e) => {
-        e.preventDefault()
-        const newChat = {
-            message: message.value
-        }
+        messageBox.addEventListener('click', (e) => {
+            e.preventDefault()
+            const newChat = {
+                message: message.value
+            }
+            message.value = ""
+            Chat.create(newChat)
 
-        Chat.create(newChat)
-        form.reset()
     })
-    //     var eventHandlers = {
-    //         deleteAll: function() {
-    //             myDiary.deleteAll();
-    //             view.displayEntries()
-    //         },
-
-
-
 
 })
