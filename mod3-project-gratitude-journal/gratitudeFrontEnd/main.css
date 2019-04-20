@@ -245,12 +245,11 @@ li {
 }
 
 .chatbox {
-    /* border: #dc83ea solid 3px; */
+    border: #dc83ea solid 3px;
     background: rgba(255, 255, 255, 0.5);
     border: grey solid 1px;
     padding: 1rem;
     width: 20rem;
-    /* height: 25rem; */
     display: inline-grid;
     margin: 1rem 1rem;
     box-shadow: 10px 10px #dd88f7;
