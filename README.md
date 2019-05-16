@@ -15,8 +15,6 @@ Fork and clone this repository to your local machine. Bedore you run the applica
 Running the application<br><br>
 We've set up the migrations in the db/migrate directory to create the journal, entry, and chat table. In db/migrate directory, we've also set up some data in the seeds file for you to play around with.
 
-Contributor's Guide<br><br>
-
 Program Structure<br><br>
 Database connection and files connection are set up in environment file in config/environment.rb
 You can find database schema and data in db, and models in app/models
