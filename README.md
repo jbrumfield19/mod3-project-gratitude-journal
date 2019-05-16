@@ -4,7 +4,7 @@ Flatiron Gratitude Journal <br><br>
 Welome to the Flatiron Gratitude Journal! A place where you can write out what you're grateful for daily, review all of your entries, listen to a relaxing meditation that also incorporates a beautiful moving background, and chat with others about how you're feeling for that day. We hope that you enjoy! 
 
 Models and Associations<br><br>
-In this application, we have a chat, entry and journal model. They are associated in the following way:e
+In this application, we have a chat, entry and journal model. They are associated in the following way:
 
 - A journal has many entries
 - An entry belongs to a journal
