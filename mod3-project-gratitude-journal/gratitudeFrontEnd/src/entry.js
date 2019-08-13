@@ -14,7 +14,8 @@ class Entry {
         deleteBtn.innerText = 'Erase'
 
         const dateHeader = document.createElement('h2')
-        dateHeader.innerText = getCurrentDate()
+        dateHeader.innerText = 
+        getCurrentDate()
         dateHeader.className = 'date'
 
         const qtion = document.createElement('h3')
